@@ -1,0 +1,18 @@
+<div class="row last-posts">
+    <h3>
+        Derniers posts
+    </h3>
+
+    <ul>
+        {% for post in site.categories.blog limit:5 %}
+        <li>
+            <a href="/blog/angularjs-la-voie-du-testeur-les-scopes">
+                <img src="{{ "/assets/img/thumb.jpg" | prepend: site.baseurl }}" alt="thumb">
+            </a>
+            <a href="/blog/angularjs-la-voie-du-testeur-les-scopes">{{ post.title }}</a>
+            <br>
+            <span>{{ post.date | date: "%d/%m/%Y" }}</span>
+        </li>
+        {% endfor %}
+    </ul>
+</div>

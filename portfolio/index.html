@@ -1,0 +1,34 @@
+---
+layout: portfolio
+title: Vivian Pennel - Réalisations
+---
+
+<div class="row">
+    <div class="col-xs-12 col-lg-8 col-lg-offset-2">
+        <h1>Réalisations</h1>
+    </div>
+</div>
+
+{% for post in site.categories.portfolio %}
+
+<div class="row">
+    <div class="col-xs-12 col-sm-4 col-lg-3 col-lg-offset-2">
+        {% if post.imageUrl != nil %}
+        <a href="{{ post.imageUrl }}" target="_blank">
+        {% endif %}
+            <img style="display: block; opacity: 1;"
+                 src="{{ post.img | prepend: "/assets/img/portfolio/" +  | prepend: site.baseurl }}"
+                 alt="Project image"
+                 class="image" />
+        {% if post.imageUrl != nil %}
+        </a>
+        {% endif %}
+    </div>
+    <div class="col-xs-12 col-sm-8 col-lg-5">
+        <h2>{{ post.title }} </h2>
+        {{ post.content }}
+    </div>
+</div>
+
+
+{% endfor %}

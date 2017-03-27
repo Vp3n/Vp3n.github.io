@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+<body>
+
+<div class="container-fluid">
+    {% include menu.html %}
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-9 col-lg-7 col-lg-offset-1">
+            <main>
+                <h1 class="sr-only">Blog</h1>
+                {{ content }}
+            </main>
+        </div>
+        <div class="col-sm-3 sidebar">
+            {% include sidebar.html %}
+            {% include sidebar-tweets.html %}
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    {% include footer.html %}
+</div>
+
+</body>
+
+</html>

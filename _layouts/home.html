@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+<body>
+
+<div class="container-fluid">
+    {% include menu.html %}
+</div>
+
+<div class="container-fluid">
+    <div class="row text-center">
+        <div class="col-sm-12 col-lg-8 col-lg-offset-2">
+            <div class="item-intro">
+                <h1>Vivian Pennel - Software Craftsman</h1>
+                Engineering Manager
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-3 col-lg-offset-2 col-sm-4 col-xs-12">
+            <div class="item-it">
+                <h4>Scala / Akka</h4>
+                <p>
+                    Ma technologie de prédilection pour le développement backend
+                    de service distribuées
+                </p>
+            </div>
+        </div>
+        <div class="col-lg-3 col-sm-4 col-xs-12">
+            <div class="item-it">
+                <h4>Java / Spring</h4>
+                <p>
+                    Mon choix de préférence pour les applications CRUD
+                </p>
+            </div>
+        </div>
+        <div class="col-lg-3 col-sm-4 col-xs-12">
+            <div class="item-it">
+                <h4>Javascript / AngularJS</h4>
+                <p>
+                    Langage incontournable du web, notamment avec AngularJS.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-9 col-lg-6 col-lg-offset-2">
+            <main>
+                {{ content }}
+            </main>
+        </div>
+        <div class="col-sm-3 sidebar">
+            {% include sidebar.html %}
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    {% include footer.html %}
+</div>
+
+</body>
+
+</html>
