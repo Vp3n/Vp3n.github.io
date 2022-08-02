@@ -19,9 +19,6 @@
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li {% if current[1] == 'experiences' %}class='active'{% endif %}>
-                    <a  href="{{ "/experiences" | prepend: site.baseurl }}">CV</a>
-                </li>
                 <li {% if current[1] == 'portfolio' %}class='active'{% endif %}>
                     <a href="{{ "/portfolio" | prepend: site.baseurl }}">Réalisation</a>
                     <ul class="dropdown-menu">
